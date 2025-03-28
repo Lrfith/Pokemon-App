@@ -33,7 +33,7 @@ const PokemonListScreen = () => {
     const fetchPokemons = async () => {
         try {
             setLoading(true);
-            const limit = 100; // Fetch first 20 Pokémon
+            const limit = 100; // Fetch first 100 Pokémon
             const pokemonDetails = await Promise.all(
                 Array.from({ length: limit }, (_, index) => index + 1).map(async (id) => {
                     const response = await fetch(`https://pokeapi.co/api/v2/pokemon/${id}`);
@@ -55,7 +55,7 @@ const PokemonListScreen = () => {
                         backImage: detailData.sprites.back_default,
                         types: detailData.types.map(type => ({
                             name: type.type.name,
-                            color: typeColors[type.type.name] || "#A8A77A" // Default color if type not found
+                            color: typeColors[type.type.name] || "#A8A77A"
                         })),
                         height: (detailData.height / 10).toFixed(1),
                         weight: (detailData.weight / 10).toFixed(1),
@@ -67,7 +67,7 @@ const PokemonListScreen = () => {
             );
 
             setPokemon(pokemonDetails);
-            setFilteredPokemon(pokemonDetails); // Initialize filtered list
+            setFilteredPokemon(pokemonDetails); 
             setLoading(false);
         } catch (error) {
             console.error(error);

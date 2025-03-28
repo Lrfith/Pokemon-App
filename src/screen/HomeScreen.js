@@ -1,5 +1,5 @@
 import { StyleSheet, Text, View, Image, Button, TouchableOpacity } from 'react-native'
-import React, { useEffect, useState } from 'react'
+import React from 'react'
 
 
 const HomeScreen = ({ navigation }) => {

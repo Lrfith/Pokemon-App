@@ -195,8 +195,8 @@ const styles = StyleSheet.create({
     },
     buttonsContainer: {
         flex: 1,
-        justifyContent: 'flex-end',  // Push buttons to the bottom
-        marginBottom: 20,  // Add space from the bottom
+        justifyContent: 'flex-end',  
+        marginBottom: 20, 
     },
     image: {
         width: 100,

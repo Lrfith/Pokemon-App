@@ -1,6 +1,6 @@
 import { StyleSheet, Text, View } from 'react-native'
-import React, { useEffect, useState } from 'react'
-import { BottomTabBar, createBottomTabNavigator } from '@react-navigation/bottom-tabs'
+import React from 'react'
+import { createBottomTabNavigator } from '@react-navigation/bottom-tabs'
 import { NavigationContainer } from '@react-navigation/native';
 import { Ionicons } from '@expo/vector-icons'
 
@@ -9,9 +9,6 @@ import PokemonListScreen from './src/screen/PokemonListScreen'
 import PokemonDetailsScreen from './src/screen/PokemonDetailsScreen'
 
 const Tab = createBottomTabNavigator();
-
-// API pokémon
-
 
 const App = () => {
   
@@ -41,5 +38,3 @@ const App = () => {
 }
 
 export default App
-
-const styles = StyleSheet.create({})
